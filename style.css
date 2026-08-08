@@ -1,40 +1,98 @@
+/* การตั้งค่าพื้นฐานของหน้าเว็บ */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f0f4f8; /* เปลี่ยนพื้นหลังรวมเป็นสีฟ้านมพาสเทล */
+    color: #2d3748;
 }
 
+/* ส่วนหัวของเว็บ (ไล่เฉดสีธีมท้องฟ้าและการบิน) */
 header {
-    background: #4CAF50; /* สีพื้นหลังของส่วนหัว */
-    color: white; /* สีข้อความ */
-    padding: 20px 0; /* ระยะห่างด้านบนและล่าง */
-    text-align: center; /* จัดข้อความถึงกลาง */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
 }
 
 header p {
-    margin: 5px 0 0; /* ตั้งค่าระยะห่างของข้อความรอง */
+    margin: 10px 0 0;
+    font-size: 1.1em;
+    opacity: 0.9;
 }
 
+/* กล่องเนื้อหาแต่ละส่วน (ปรับให้ขอบมนและมีมิติเงาที่นุ่มนวลขึ้น) */
 section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px; /* จำกัดความกว้างของเนื้อหา */
-    background: white; /* พื้นหลังสีขาว */
-    border-radius: 8px; /* ทำให้ขอบมน */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบา ๆ */
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 750px;
+    background: white;
+    border-radius: 16px; /* ขอบมนสวยงามขึ้น */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* เงากล่องมีมิติขึ้น */
+    transition: transform 0.3s ease;
 }
 
+section:hover {
+    transform: translateY(-5px); /* เวลาเอานิ้วจิ้มหรือเมาส์ชี้ กล่องจะลอยขึ้นเล็กน้อย */
+}
+
+h2 {
+    color: #1e3c72; /* เปลี่ยนสีหัวข้อหลักเป็นน้ำเงินเข้ม */
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* ตกแต่งส่วนกล่องผลงานย่อย */
+.project {
+    background-color: #f7fafc;
+    padding: 15px;
+    border-left: 5px solid #3182ce; /* เพิ่มเส้นขอบสีฟ้าด้านซ้าย */
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 0 0 8px;
+    color: #2b6cb0;
+}
+
+/* รายการทักษะ */
+ul {
+    list-style-type: none; /* เอาจุดสี่เหลี่ยมจืดๆ ออก */
+    padding-left: 0;
+}
+
+ul li {
+    background: #ebf8ff; /* ใส่พื้นหลังสีฟ้าอ่อนให้ข้อความทักษะ */
+    color: #2b6cb0;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ส่วนท้ายของเว็บ */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #333; /* สีพื้นหลังเข้ม */
+    padding: 25px 20px;
+    background: #1a202c;
+    color: #a0aec0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer strong {
     color: white;
-    margin-top: 20px;
 }
